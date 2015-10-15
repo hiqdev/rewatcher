@@ -1,7 +1,7 @@
 Repositories watcher
 --------------------
 
-Scans directory tree recursively to find unsynced directories
+Scans directory tree recursively to find unsynced repositories.
 
 [![Latest Stable Version](https://poser.pugx.org/hiqdev/rewatcher/v/stable.png)](https://packagist.org/packages/hiqdev/rewatcher)
 [![Total Downloads](https://poser.pugx.org/hiqdev/rewatcher/downloads.png)](https://packagist.org/packages/hiqdev/rewatcher)

@@ -4,7 +4,7 @@ package:
     title:          Repositories watcher
     keywords:       repositories, watcher
     description:    |
-        Scans directory tree recursively to find unsynced directories
+        Scans directory tree recursively to find unsynced repositories.
 
 require:
     hiqdev/hidev-config:        "*"
