@@ -3,8 +3,6 @@
 import os
 from pprint import pprint
 
-PULL = 0
-
 cwd = os.getcwd()
 
 skips = (
@@ -13,7 +11,7 @@ skips = (
     'Your branch is up-to-date',
     'nothing to commit, working directory clean',
 )
-pulls = (
+fetches = (
     'Your branch is ahead',
     'Your branch is behind',
 )
@@ -23,8 +21,8 @@ def check(dir):
     status = check_status()
     if status is None:
         return
-    if PULL and status.startswith(pulls):
-        os.system('git pull --quiet --no-commit --ff-only')
+    if status.startswith(fetches):
+        os.system('git fetch --quiet')
         status = check_status()
         if status is None:
             return
