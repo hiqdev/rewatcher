@@ -26,7 +26,7 @@ def check(dir):
         status = check_status()
         if status is None:
             return
-    print("{status} - {dir}".format(status=colored(status, 'yellow'), dir=dir))
+    print("{dir:50} - {status}".format(status=colored(status, 'yellow'), dir=dir))
 
 def check_status():
     status = None
