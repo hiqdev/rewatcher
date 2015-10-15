@@ -1,0 +1,11 @@
+package:
+    name:           rewatcher
+    type:           project
+    title:          Repositories watcher
+    keywords:       repositories, watcher
+    description:    |
+        Scans directory tree recursively to find unsynced directories
+
+require:
+    hiqdev/hidev-config:        "*"
+    hiqdev/hidev-config-python: "*@dev"

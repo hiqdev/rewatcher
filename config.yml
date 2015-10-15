@@ -1,0 +1,11 @@
+package:
+    name:           chkipper
+    type:           project
+    title:          Changelog keeper
+    keywords:       commits, changelog
+    description:    |
+        Helps to track all the commits to your project and convert them to CHANGELOG file.
+
+require:
+    hiqdev/hidev-config:        "*"
+    hiqdev/hidev-config-python: "*@dev"
