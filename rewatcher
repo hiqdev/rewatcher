@@ -1,0 +1,55 @@
+#!/usr/bin/env python
+
+import os
+from pprint import pprint
+
+PULL = 0
+
+cwd = os.getcwd()
+
+skips = (
+    'On branch',
+    'HEAD detached',
+    'Your branch is up-to-date',
+    'nothing to commit, working directory clean',
+)
+pulls = (
+    'Your branch is ahead',
+    'Your branch is behind',
+)
+
+def check(dir):
+    os.chdir(dir)
+    status = check_status()
+    if status is None:
+        return
+    if PULL and status.startswith(pulls):
+        os.system('git pull --quiet --no-commit --ff-only')
+        status = check_status()
+        if status is None:
+            return
+    print("{status} - {dir}".format(status=colored(status, 'yellow'), dir=dir))
+
+def check_status():
+    status = None
+    for line in os.popen('git status').readlines():
+        status = line.strip()
+        if status and not status.startswith(skips):
+            return status.strip('.,:')
+    return None
+
+endcolors = '\033[0m'
+termcolors = {
+    'blue':     '\033[94m',
+    'yellow':   '\033[93m',
+    'green':    '\033[92m',
+    'end':      '\033[0m',
+}
+
+def colored(str, color):
+    return termcolors[color] + str + endcolors
+
+for dir in os.popen('find . -name .git').readlines():
+    dir = cwd + '/' + dir[2:-6]
+    check(dir)
+
