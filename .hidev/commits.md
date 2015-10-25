@@ -3,6 +3,9 @@ hiqdev/rewatcher commits history
 
 ## Under development
 
+
+## 0.0.1 2015-10-25
+
 - Fixed output formatting
     - 5e955b2 2015-10-15 improved formatting (sol@hiqdev.com)
 - Added PyPI packaging
