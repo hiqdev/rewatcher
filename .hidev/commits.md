@@ -4,6 +4,11 @@ hiqdev/rewatcher commits history
 ## Under development
 
 
+## 0.0.2 2015-10-25
+
+- Added GitHub version badge
+    - 0ff40be 2015-10-25 + github version badge (sol@hiqdev.com)
+
 ## 0.0.1 2015-10-25
 
 - Fixed output formatting
