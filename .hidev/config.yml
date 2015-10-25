@@ -8,4 +8,4 @@ package:
 
 require:
     hiqdev/hidev-config:        "*"
-    hiqdev/hidev-config-python: "*@dev"
+    hiqdev/hidev-config-python: "*"
