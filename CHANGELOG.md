@@ -3,6 +3,7 @@ hiqdev/rewatcher changelog
 
 ## Under development
 
+- Fixed output formatting
 - Added PyPI packaging
 - Added basics
 
