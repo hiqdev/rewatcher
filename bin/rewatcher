@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 
 import os
+import sys
 from pprint import pprint
+from collections import OrderedDict
 
 cwd = os.getcwd()
 
@@ -22,11 +24,11 @@ def check(dir):
     if status is None:
         return
     if status.startswith(fetches):
-        os.system('git fetch --quiet')
+        #os.system('git fetch --quiet')
         status = check_status()
         if status is None:
             return
-    print("{dir:50} - {status}".format(status=colored(status, 'yellow'), dir=dir))
+    return status
 
 def check_status():
     status = None
@@ -45,9 +47,35 @@ termcolors = {
 }
 
 def colored(str, color):
-    return termcolors[color] + str + endcolors
+    if sys.stdout.isatty():
+        return termcolors[color] + str + endcolors
+    return str
 
-for dir in os.popen('find . -name .git').readlines():
-    dir = cwd + '/' + dir[2:-6]
-    check(dir)
+def tprint(str):
+    if sys.stdout.isatty():
+        print(str),
 
+def run():
+    prev = 'Finding gits... '
+    tprint(prev)
+    sys.stdout.flush()
+    raws = os.popen('find . -name .git').readlines()
+    dirs = sorted(raws)
+    stats = OrderedDict()
+    for dir in dirs:
+        dir = cwd + '/' + dir[2:-6]
+        tprint('\r')
+        tprint(dir.ljust(len(prev)))
+        prev = dir
+        status = check(dir)
+        if status:
+            stats[dir] = status
+    tprint('\r')
+    max = 1
+    for dir in stats:
+        if len(dir)>max:
+            max = len(dir)
+    for dir in stats:
+        print("{dir} - {status}".format(status=colored(stats[dir], 'yellow'), dir=dir.ljust(max)))
+
+run()
