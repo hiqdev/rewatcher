@@ -3,6 +3,8 @@ hiqdev/rewatcher commits history
 
 ## Under development
 
+- Added fancy output
+    - ff77c0d 2015-11-02 + fancy output (sol@hiqdev.com)
 
 ## 0.0.2 2015-10-25
 

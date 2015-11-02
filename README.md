@@ -1,5 +1,5 @@
 Repositories watcher
---------------------
+====================
 
 Scans directory tree recursively to find unsynced repositories.
 

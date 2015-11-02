@@ -3,6 +3,7 @@ hiqdev/rewatcher changelog
 
 ## Under development
 
+- Added fancy output
 
 ## 0.0.2 2015-10-25
 
