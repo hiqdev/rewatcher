@@ -41,5 +41,13 @@
             "email": "bladeroot@hiqdev.com",
             "homepage": "http://hiqdev.com/"
         }
+    ],
+    "autoload": {
+        "psr-4": {
+            "hiqdev\\rewatcher\\": "src"
+        }
+    },
+    "bin": [
+        "bin/rewatcher"
     ]
 }
