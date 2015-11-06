@@ -24,7 +24,7 @@ def check(dir):
     if status is None:
         return
     if status.startswith(fetches):
-        #os.system('git fetch --quiet')
+        os.system('git fetch --quiet')
         status = check_status()
         if status is None:
             return
