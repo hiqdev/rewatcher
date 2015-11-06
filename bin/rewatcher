@@ -46,6 +46,8 @@ termcolors = {
     'end':      '\033[0m',
 }
 
+windmill = ['-', '\\', '|', '/']
+
 def colored(str, color):
     if sys.stdout.isatty():
         return termcolors[color] + str + endcolors
@@ -62,14 +64,19 @@ def run():
     raws = os.popen('find . -name .git').readlines()
     dirs = sorted(raws)
     stats = OrderedDict()
+    no = 0
     for dir in dirs:
         dir = cwd + '/' + dir[2:-6]
+        msg = windmill[no % 4] + ' ' + dir
         tprint('\r')
-        tprint(dir.ljust(len(prev)))
-        prev = dir
+        tprint(msg.ljust(len(prev)))
+        prev = msg
+        no += 1
         status = check(dir)
         if status:
             stats[dir] = status
+    tprint('\r')
+    tprint(''.ljust(len(prev)))
     tprint('\r')
     max = 1
     for dir in stats:
