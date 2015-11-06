@@ -1,8 +1,9 @@
 package:
     name:           rewatcher
     type:           project
+    headline:       rewatcher
     title:          Repositories watcher
-    keywords:       repositories, watcher
+    keywords:       git, repositories, watcher
     description:    |
         Scans directory tree recursively to find unsynced repositories.
 

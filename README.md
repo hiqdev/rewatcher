@@ -1,9 +1,11 @@
-Repositories watcher
-====================
+rewatcher
+=========
 
-Scans directory tree recursively to find unsynced repositories.
+**Repositories watcher**
 
 [![GitHub version](https://badge.fury.io/gh/hiqdev%2Frewatcher.svg)](https://badge.fury.io/gh/hiqdev%2Frewatcher)
+
+Scans directory tree recursively to find unsynced repositories.
 
 ## Installation
 
