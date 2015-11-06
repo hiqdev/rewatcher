@@ -3,6 +3,10 @@ hiqdev/rewatcher changelog
 
 ## Under development
 
+
+## 0.0.3 2015-11-06
+
+- Added composer.json to install through composer
 - Added fancy output
 
 ## 0.0.2 2015-10-25

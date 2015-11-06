@@ -3,6 +3,11 @@ hiqdev/rewatcher commits history
 
 ## Under development
 
+
+## 0.0.3 2015-11-06
+
+- Added composer.json to install through composer
+    - ae41073 2015-11-06 + composer.json (sol@hiqdev.com)
 - Added fancy output
     - ff77c0d 2015-11-02 + fancy output (sol@hiqdev.com)
 
