@@ -4,6 +4,11 @@ hiqdev/rewatcher changelog
 ## Under development
 
 
+## 0.0.4 2015-11-06
+
+- Added installing of bin/rewatcher in composer.json
+- Added back fetching
+
 ## 0.0.3 2015-11-06
 
 - Added composer.json to install through composer
