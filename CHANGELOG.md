@@ -3,6 +3,7 @@ hiqdev/rewatcher changelog
 
 ## Under development
 
+- Fixed printing to the same line for narrow screens
 
 ## 0.0.4 2015-11-06
 

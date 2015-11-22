@@ -1,3 +1,9 @@
+# vendor dirs
+vendor
+
+# composer lock files
+composer.lock
+
 # hidev internals
 .hidev/composer.json
 .hidev/composer.lock

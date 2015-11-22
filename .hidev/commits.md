@@ -3,6 +3,8 @@ hiqdev/rewatcher commits history
 
 ## Under development
 
+- Fixed printing to the same line for narrow screens
+    - dc59efe 2015-11-22 fixed printing to the same line: used `\b` <- `\r` (sol@hiqdev.com)
 
 ## 0.0.4 2015-11-06
 
