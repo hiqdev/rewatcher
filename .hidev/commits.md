@@ -3,6 +3,9 @@ hiqdev/rewatcher commits history
 
 ## Under development
 
+
+## 0.0.5 2015-11-23
+
 - Fixed printing to the same line for narrow screens
     - c17a2d7 2015-11-23 fixed string cleaning (sol@hiqdev.com)
     - 6b9c0e0 2015-11-22 fixed printing to the same line: used `\b` <- `\r` (sol@hiqdev.com)
