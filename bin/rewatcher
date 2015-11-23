@@ -75,6 +75,8 @@ def run():
         status = check(dir)
         if status:
             stats[dir] = status
+    tprint('\r')
+    tprint(''.ljust(len(prev))) # cleans string with spaces
     tprint('\b' * 300)
     tprint('\r')
     max = 1
