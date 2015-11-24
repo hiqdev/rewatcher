@@ -8,5 +8,5 @@ package:
         Scans directory tree recursively to find unsynced repositories.
 
 require:
-    hiqdev/hidev-config:        "*"
-    hiqdev/hidev-config-python: "*"
+    hiqdev/hidev-hiqdev: "*"
+    hiqdev/hidev-python: "*"
