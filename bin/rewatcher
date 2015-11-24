@@ -2,10 +2,16 @@
 
 import os
 import sys
+import argparse
 from pprint import pprint
 from collections import OrderedDict
 
-cwd = os.getcwd()
+parser = argparse.ArgumentParser(description="Repositories watcher version 0.1.0")
+parser.add_argument('-p', '--pull', dest='pull', action='store_const', help='pull instead of fetch', const='pull', default='fetch')
+parser.add_argument('-v', '--version', action='version', version='%(prog)s 0.1.0')
+parser.add_argument('directory', nargs='?', action='store', type=str, default=os.getcwd(), help='directory to start from')
+
+ARGS = parser.parse_args()
 
 skips = (
     'On branch',
@@ -24,7 +30,7 @@ def check(dir):
     if status is None:
         return
     if status.startswith(fetches):
-        os.system('git fetch --quiet')
+        os.system('git ' + ARGS.pull + ' --quiet')
         status = check_status()
         if status is None:
             return
@@ -66,7 +72,7 @@ def run():
     stats = OrderedDict()
     no = 0
     for dir in dirs:
-        dir = cwd + '/' + dir[2:-6]
+        dir = ARGS.directory + '/' + dir[2:-6]
         msg = windmill[no % 4] + ' ' + dir
         tprint('\b' * 300)
         tprint(msg.ljust(len(prev)))
