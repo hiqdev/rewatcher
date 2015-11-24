@@ -4,6 +4,10 @@ hiqdev/rewatcher changelog
 ## Under development
 
 
+## 0.0.6 2015-11-24
+
+- Added command line arguments: directory and --pull
+
 ## 0.0.5 2015-11-23
 
 - Fixed printing to the same line for narrow screens

@@ -4,6 +4,11 @@ hiqdev/rewatcher commits history
 ## Under development
 
 
+## 0.0.6 2015-11-24
+
+- Added command line arguments: directory and --pull
+    - 9ae0227 2015-11-24 added command line arguments: directory and --pull (sol@hiqdev.com)
+
 ## 0.0.5 2015-11-23
 
 - Fixed printing to the same line for narrow screens
