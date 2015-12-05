@@ -7,8 +7,10 @@ from pprint import pprint
 from collections import OrderedDict
 
 parser = argparse.ArgumentParser(description="Repositories watcher version 0.1.0")
-parser.add_argument('-p', '--pull', dest='pull', action='store_const', help='pull instead of fetch', const='pull', default='fetch')
-parser.add_argument('-v', '--version', action='version', version='%(prog)s 0.1.0')
+parser.add_argument('-p', '--pull',    action='store_const', dest='pull',    const='pull', default='fetch',    help='pull instead of fetch')
+parser.add_argument('-f', '--force',   action='store_const', dest='force',   const=True,   default=False,      help='force fetch/pull')
+parser.add_argument('-v', '--verbose', action='store_const', dest='verbose', const='',     default=' --quiet', help='be verbose')
+parser.add_argument('-V', '--version', action='version', version='%(prog)s 0.1.0')
 parser.add_argument('directory', nargs='?', action='store', type=str, default=os.getcwd(), help='directory to start from')
 
 ARGS = parser.parse_args()
@@ -27,10 +29,10 @@ fetches = (
 def check(dir):
     os.chdir(dir)
     status = check_status()
-    if status is None:
+    if status is None and not ARGS.force:
         return
-    if status.startswith(fetches):
-        os.system('git ' + ARGS.pull + ' --quiet')
+    if ARGS.force or status.startswith(fetches):
+        os.system('git ' + ARGS.pull + ARGS.verbose)
         status = check_status()
         if status is None:
             return
