@@ -1,8 +1,9 @@
 hiqdev/rewatcher changelog
 --------------------------
 
-## Under development
+## 0.0.7 2016-02-19
 
+- Added force and verbose options
 
 ## 0.0.6 2015-11-24
 
