@@ -1,9 +1,3 @@
-# vendor dirs
-vendor
-
-# composer lock files
-composer.lock
-
 # hidev internals
 .hidev/composer.json
 .hidev/composer.lock
@@ -11,10 +5,24 @@ composer.lock
 
 # IDE & OS files
 .*.swp
-.idea
-nbproject
+.DS_Store
 .buildpath
+.idea
 .project
 .settings
 Thumbs.db
-.DS_Store
+nbproject
+
+# Byte-compiled / optimized / DLL files
+*$py.class
+*.py[cod]
+__pycache__/
+
+# vendor dirs
+vendor
+
+# composer lock files
+composer.lock
+
+# PHARs
+composer.phar

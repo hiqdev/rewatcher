@@ -1,12 +1,13 @@
 package:
-    name:           rewatcher
     type:           project
-    headline:       rewatcher
+    name:           rewatcher
     title:          Repositories watcher
+    headline:       rewatcher
     keywords:       git, repositories, watcher
     description:    |
         Scans directory tree recursively to find unsynced repositories.
 
 require:
-    hiqdev/hidev-hiqdev: "*"
-    hiqdev/hidev-python: "*"
+    hiqdev/hidev-python:   "*"
+    hiqdev/hidev-composer: "*"
+    hiqdev/hidev-vendor:   "*"

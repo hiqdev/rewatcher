@@ -3,6 +3,7 @@ hiqdev/rewatcher commits history
 
 ## Under development
 
+    - 5caa41b 2015-12-05 + force and verbose options (sol@hiqdev.com)
 
 ## 0.0.6 2015-11-24
 
