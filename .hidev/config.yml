@@ -11,4 +11,5 @@ plugins:
     hiqdev/hidev-python:   "*@dev"
     hiqdev/hidev-pytest:   "*@dev"
     hiqdev/hidev-travis:   "*@dev"
+    hiqdev/hidev-scrutinizer:   "*@dev"
     hiqdev/hidev-hiqdev:   "*"
