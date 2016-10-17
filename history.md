@@ -1,9 +1,10 @@
 hiqdev/rewatcher
 ----------------
 
-## [Under development]
+## [0.0.8] - 2016-10-17
 
 - Added initial testing
+    - [3dc9a8b] 2016-10-17 redone history bumping with `chkipper` [sol@hiqdev.com]
     - [c25d612] 2016-10-17 added `travis/after_script` for coverage uploading [sol@hiqdev.com]
     - [c06d771] 2016-10-17 used dev versions of `hiqdev/hidev-pytest` and `hiqdev/hidev-travis` [sol@hiqdev.com]
     - [2c0d282] 2016-10-17 added tests files [sol@hiqdev.com]
@@ -82,3 +83,4 @@ hiqdev/rewatcher
 [c06d771]: https://github.com/hiqdev/rewatcher/commit/c06d771
 [2c0d282]: https://github.com/hiqdev/rewatcher/commit/2c0d282
 [4922087]: https://github.com/hiqdev/rewatcher/commit/4922087
+[3dc9a8b]: https://github.com/hiqdev/rewatcher/commit/3dc9a8b
