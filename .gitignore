@@ -25,6 +25,7 @@ __pycache__/
 chkipper.phar
 composer.phar
 coverage.phar
+ocular.phar
 pip.phar
 pytest.phar
 
