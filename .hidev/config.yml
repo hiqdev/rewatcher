@@ -9,4 +9,6 @@ package:
 
 plugins:
     hiqdev/hidev-python:   "*@dev"
+    hiqdev/hidev-pytest:   "*@dev"
+    hiqdev/hidev-travis:   "*@dev"
     hiqdev/hidev-hiqdev:   "*"
