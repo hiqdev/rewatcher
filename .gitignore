@@ -13,10 +13,20 @@
 Thumbs.db
 nbproject
 
+# test coverage
+.coverage
+
 # Byte-compiled / optimized / DLL files
 *$py.class
 *.py[cod]
 __pycache__/
+
+# PHARs
+chkipper.phar
+composer.phar
+coverage.phar
+pip.phar
+pytest.phar
 
 # vendor dirs
 vendor
@@ -24,5 +34,5 @@ vendor
 # composer lock files
 composer.lock
 
-# PHARs
-composer.phar
+# pytest cache
+/.cache

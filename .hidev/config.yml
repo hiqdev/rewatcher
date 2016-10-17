@@ -7,7 +7,6 @@ package:
     description:    |
         Scans directory tree recursively to find unsynced repositories.
 
-require:
-    hiqdev/hidev-python:   "*"
-    hiqdev/hidev-composer: "*"
-    hiqdev/hidev-vendor:   "*"
+plugins:
+    hiqdev/hidev-python:   "*@dev"
+    hiqdev/hidev-hiqdev:   "*"

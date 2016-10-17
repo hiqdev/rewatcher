@@ -56,8 +56,10 @@ termcolors = {
 
 windmill = ['-', '\\', '|', '/']
 
-def colored(str, color):
-    if sys.stdout.isatty():
+def colored(str, color, apply = None):
+    if apply is None:
+        apply = sys.stdout.isatty()
+    if apply:
         return termcolors[color] + str + endcolors
     return str
 
@@ -65,7 +67,7 @@ def tprint(str):
     if sys.stdout.isatty():
         print(str),
 
-def run():
+def main():
     prev = 'Finding gits... '
     tprint(prev)
     sys.stdout.flush()
@@ -94,4 +96,5 @@ def run():
     for dir in stats:
         print("{dir} - {status}".format(status=colored(stats[dir], 'yellow'), dir=dir.ljust(max)))
 
-run()
+if __name__ == '__main__':
+    main()
