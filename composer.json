@@ -42,6 +42,10 @@
             "homepage": "http://hiqdev.com/"
         }
     ],
+    "require-dev": {
+        "hiqdev/hidev-python":   "*@dev",
+        "hiqdev/hidev-hiqdev":   "*"
+    },
     "autoload": {
         "psr-4": {
             "hiqdev\\rewatcher\\": "src"

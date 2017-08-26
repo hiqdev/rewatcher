@@ -6,10 +6,3 @@ package:
     keywords:       git, repositories, watcher
     description:    |
         Scans directory tree recursively to find unsynced repositories.
-
-plugins:
-    hiqdev/hidev-python:   "*@dev"
-    hiqdev/hidev-pytest:   "*@dev"
-    hiqdev/hidev-travis:   "*@dev"
-    hiqdev/hidev-scrutinizer:   "*@dev"
-    hiqdev/hidev-hiqdev:   "*"

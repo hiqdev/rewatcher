@@ -1,7 +1,12 @@
 # hidev internals
-.hidev/composer.json
-.hidev/composer.lock
-.hidev/vendor
+/.hidev/composer.json
+/.hidev/composer.lock
+/.hidev/runtime
+/.hidev/vendor
+
+# local config
+/.env
+/hidev-local.yml
 
 # IDE & OS files
 .*.swp
@@ -13,27 +18,16 @@
 Thumbs.db
 nbproject
 
-# test coverage
-.coverage
-
 # Byte-compiled / optimized / DLL files
 *$py.class
 *.py[cod]
 __pycache__/
 
-# PHARs
+# Binaries
 chkipper.phar
 composer.phar
-coverage.phar
 ocular.phar
-pip.phar
-pytest.phar
 
-# vendor dirs
-vendor
-
-# composer lock files
-composer.lock
-
-# pytest cache
-/.cache
+# composer internals
+/composer.lock
+/vendor
