@@ -19,6 +19,7 @@ skips = (
     'On branch',
     'HEAD detached',
     'Your branch is up-to-date',
+    'Your branch is up to date',
     'nothing to commit, working directory clean',
     'nothing to commit, working tree clean',
 )
