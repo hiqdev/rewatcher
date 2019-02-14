@@ -44,9 +44,14 @@ def check_status():
     status = None
     for line in os.popen('git status').readlines():
         status = line.strip()
-        if status and not status.startswith(skips):
+        if status and not is_skippable(status):
             return status.strip('.,:')
     return None
+
+def is_skippable(status):
+    if status.startswith('# '):
+        status = status[2:]
+    return status.startswith(skips)
 
 endcolors = '\033[0m'
 termcolors = {
