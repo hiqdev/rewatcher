@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import sys
@@ -72,7 +72,7 @@ def colored(str, color, apply = None):
 
 def tprint(str):
     if sys.stdout.isatty():
-        print(str),
+        print(str, end='')
 
 def main():
     prev = 'Finding gits... '
